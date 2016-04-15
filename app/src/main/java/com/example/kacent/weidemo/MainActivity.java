@@ -65,6 +65,7 @@ public class MainActivity extends FragmentActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                //d
                 ObjectAnimator.ofFloat(imageView, "translationX", 200F * (position + positionOffset)).setDuration(1000).start();
 
             }
