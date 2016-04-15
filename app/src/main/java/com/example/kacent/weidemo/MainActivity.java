@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                ObjectAnimator.ofFloat(imageView, "translationX", 200F * (position + positionOffset)).setDuration(1000).start();
 
             }
 
@@ -76,17 +76,17 @@ public class MainActivity extends FragmentActivity {
                 switch (position) {
                     case 0:
                         chatView.setTextColor(Color.parseColor("#008000"));
-                        ObjectAnimator.ofFloat(imageView, "translationX", 200F * position).setDuration(1000).start();
+
 
                         break;
                     case 1:
                         FaView.setTextColor(Color.parseColor("#008000"));
-                        ObjectAnimator.ofFloat(imageView, "translationX", 200F * position).setDuration(1000).start();
+                       /* ObjectAnimator.ofFloat(imageView, "translationX", 200F * position).setDuration(1000).start();*/
 
                         break;
                     case 2:
                         TongView.setTextColor(Color.parseColor("#008000"));
-                        ObjectAnimator.ofFloat(imageView, "translationX", 200F * position).setDuration(1000).start();
+                      /*  ObjectAnimator.ofFloat(imageView, "translationX", 200F * position).setDuration(1000).start();*/
 
                         break;
 
